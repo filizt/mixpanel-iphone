@@ -8,6 +8,8 @@
 
 #import "MPMiniNotification.h"
 
+static NSString *const MPNotificationTypeIsMini = @"mini";
+
 @implementation MPMiniNotification
 
 - (instancetype)initWithJSONObject:(NSDictionary *)jsonObject {
@@ -53,7 +55,7 @@
 }
 
 - (NSString *)type {
-    return MPNotificationTypeMini;
+    return MPNotificationTypeIsMini;
 }
 
 @end

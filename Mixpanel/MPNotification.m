@@ -1,8 +1,7 @@
 #import "MPLogger.h"
 #import "MPNotification.h"
 
-NSString *const MPNotificationTypeMini = @"mini";
-NSString *const MPNotificationTypeTakeover = @"takeover";
+static NSString *const MPNotificationTypeIsTakeover = @"takeover";
 
 @implementation MPNotification
 
@@ -58,7 +57,7 @@ NSString *const MPNotificationTypeTakeover = @"takeover";
             }
             
             NSString *imagePath = imageURL.path;
-            if ([self.type isEqualToString:MPNotificationTypeTakeover]) {
+            if ([self.type isEqualToString:MPNotificationTypeIsTakeover]) {
                 NSString *imageName = [imagePath stringByDeletingPathExtension];
                 NSString *extension = [imagePath pathExtension];
                 imagePath = [[imageName stringByAppendingString:@"@2x"] stringByAppendingPathExtension:extension];

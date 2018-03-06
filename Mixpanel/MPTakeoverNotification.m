@@ -8,6 +8,8 @@
 
 #import "MPTakeoverNotification.h"
 
+static NSString *const MPNotificationTypeIsTakeover = @"takeover";
+
 @implementation MPTakeoverNotification
 
 - (instancetype)initWithJSONObject:(NSDictionary *)jsonObject {
@@ -62,7 +64,7 @@
 }
 
 - (NSString *)type {
-    return MPNotificationTypeTakeover;
+    return MPNotificationTypeIsTakeover;
 }
 
 @end
